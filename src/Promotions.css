@@ -1,0 +1,217 @@
+.promotions-section {
+  padding: 60px 20px 100px;
+  background-color: #ffffff;
+  width: 100%;
+}
+
+.promotions-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Wide Banner */
+.promo-wide-banner {
+  background: linear-gradient(135deg, #d3efff 0%, #e0f2fe 100%);
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 0 50px;
+  min-height: 280px; /* Reduced height */
+}
+
+.promo-wide-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 40px;
+}
+
+.promo-wide-img {
+  width: 110%;
+  max-width: 500px; /* Reduced image size */
+  height: auto;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  filter: brightness(1.1) contrast(1.2); /* Blows out the background to pure white, removing the box edge */
+  transform: translateX(-5%);
+}
+
+.promo-wide-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 40px 0; /* Reduced padding */
+}
+
+.promo-wide-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #111;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.promo-wide-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  color: #333;
+  line-height: 1.5;
+  max-width: 400px;
+}
+
+.promo-shop-btn {
+  background-color: #111;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px 10px 24px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 5px;
+  transition: transform 0.3s ease;
+}
+
+.promo-shop-btn:hover {
+  transform: scale(1.05);
+}
+
+.arrow-circle {
+  background-color: #fff;
+  color: #111;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+/* 3 Cards Grid */
+.promo-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.promo-card {
+  border-radius: 30px;
+  padding: 30px; /* Reduced padding */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 380px; /* Reduced height */
+  overflow: hidden;
+  position: relative;
+}
+
+.card-green { background: linear-gradient(180deg, #4dae80 0%, #c4ebd6 100%); }
+.card-red { background: linear-gradient(180deg, #e35d72 0%, #fbd5db 100%); }
+.card-yellow { background: linear-gradient(180deg, #fbdb54 0%, #fdf5d3 100%); }
+
+.promo-card-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.2;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+.card-yellow .promo-card-title {
+  color: #111;
+}
+
+.promo-blob-container {
+  width: 200px; /* Reduced blob size */
+  height: 180px; /* Reduced blob size */
+  margin: 20px auto;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  animation: morphBlob 8s ease-in-out infinite;
+  z-index: 2;
+}
+
+.blob-alt-1 {
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  animation-direction: reverse;
+  animation-duration: 10s;
+}
+
+.blob-alt-2 {
+  border-radius: 50% 50% 40% 60% / 60% 40% 50% 50%;
+  animation-delay: -2s;
+  animation-duration: 9s;
+}
+
+@keyframes morphBlob {
+  0% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+  100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+}
+
+.promo-blob-container img {
+  width: 130%;
+  height: 130%;
+  object-fit: cover;
+}
+
+.promo-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 20px;
+  z-index: 2;
+}
+
+.promo-card-footer p {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: #111;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 220px;
+  font-weight: 500;
+}
+
+
+
+@media (max-width: 1024px) {
+  .promo-wide-banner {
+    flex-direction: column;
+    padding: 40px;
+    text-align: center;
+  }
+  .promo-wide-left {
+    padding-right: 0;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  .promo-wide-right {
+    padding: 0;
+    align-items: center;
+  }
+  .promo-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
